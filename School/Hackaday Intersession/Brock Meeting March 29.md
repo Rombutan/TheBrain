@@ -1,0 +1,8 @@
+- Disclaimer on splitting prize money
+- Catch and release
+- Lead people with what's happening next
+- AC signal interpretation paper
+- ask paul about hackaday blocking
+- Alternative to hackaday for project tracking bc profiles
+- How to get people to understand trigger on scope
+- 

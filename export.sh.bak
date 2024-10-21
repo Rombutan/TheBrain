@@ -1,0 +1,70 @@
+#! /bin/bash
+
+rm -r /home/rombutan/temp/export
+cp -r -p $PWD/ /home/rombutan/temp/export
+find /home/rombutan/temp/export -type f -exec sed -i 's/.excalidraw/.excalidraw.png/g' {} +
+find /home/rombutan/temp/export -name "*.excalidraw.md" -type f -delete
+
+DIRECTORY="/home/rombutan/temp/export/"
+
+find "$DIRECTORY" -type f -name "*.md" | while read -r file; do
+    # Process each file
+    awk '
+    BEGIN { front_matter = 0; p = 0 }
+    
+    NR == 1 {
+        if ($0 ~ /^---$/) {
+            front_matter = 1; # Front matter detected, we will wait for the second ---
+        }
+        print;
+        next;
+    }
+
+    front_matter && /^---$/ && FNR > 1 {
+        p = 1; # Front matter has ended
+        front_matter = 0; # Stop checking for second ---
+        print;
+        next;
+    }
+
+    {
+        if (!front_matter || p) {
+            # Handle equations in the form $$...$$ and ensure $$ starts on a new line
+            while (match($0, /\$\$[^$]*\$\$/)) {
+                equation = substr($0, RSTART+2, RLENGTH-4) # Extract equation without $$
+                before_eq = substr($0, 1, RSTART-1) # Content before equation
+                after_eq = substr($0, RSTART+RLENGTH) # Content after equation
+                
+                # Ensure that $$ starts on a new line if not already
+                if (length(before_eq) > 0) {
+                    print before_eq; # Print the content before equation, if any
+                }
+                
+                # Split equation into three lines
+                print "$$"
+                print equation
+                print "$$" after_eq
+                next
+            }
+            print $0 "  "; # Add two spaces to lines after ---
+        } else {
+            print;
+        }
+    }' "$file" > "$file.tmp"
+    
+    # Overwrite the original file with the modified content
+    mv "$file.tmp" "$file"
+done
+
+find "$DIRECTORY" -type f | while read -r file; do
+    # Use sed to remove the string "Public/" and overwrite the file
+    sed -i 's/Public\///g' "$file"
+done
+
+rm -r /home/rombutan/Documents/quartz/content
+cp -r -p /home/rombutan/temp/export /home/rombutan/Documents/quartz/content
+cd /home/rombutan/Documents/quartz
+npx quartz build
+
+rsync -a --delete /home/rombutan/Documents/quartz/public/* root@rombutan.com:/var/www/html/
+

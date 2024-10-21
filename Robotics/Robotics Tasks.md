@@ -1,0 +1,10 @@
+- [x] [SFR permission slip](https://drive.google.com/file/d/1ANvPs0MRz5aY5bbzfjMDIs4zcyhbmGcD/view) 📅 2024-03-06 ✅ 2024-03-07
+- [x] pay for cvr 📅 2024-03-26 ✅ 2024-04-22
+- [x] fix voltage display 📅 2024-04-03 ✅ 2024-04-08
+- [x] Replace Rio ethernet 📅 2024-04-03 ✅ 2024-04-10
+- [x] cleanup Ethernet on top 📅 2024-04-03 ✅ 2024-04-10
+- [x] switch shroud 📅 2024-04-03 ✅ 2024-04-10
+- [x] rpm shroud 📅 2024-04-03 ✅ 2024-04-10
+- [x] Rio Ethernet hold down 📅 2024-04-03 ✅ 2024-04-10
+- [x] design and build cross-breaker voltage tester 📅 2024-04-03 ✅ 2024-04-14
+- [x] get reimbursed ✅ 2024-04-14

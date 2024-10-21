@@ -1,0 +1,29 @@
+## Skills/Understanding Needed
+- Micro-python *
+- Serial Protocols
+- Ohms Law *
+- Wifi/BLE/Esp-Now/LoRa
+- Interrupts
+- Arduino Wire and Program *
+	- Displays
+		- Character
+		- Pixel
+	- Sensors
+		- SPI
+		- I2c
+		- Analog
+			- Voltage with Dividers
+			- Current with shunts
+			- Current with hall effect
+	- HID
+	- Buttons with interrupts
+- Oscilloscopes
+- Logic Analyzers (the shit sparkfun ones)
+- Power Supplies
+- Arbitrary Waveform Generators/Function Generators
+- Multimeters (all functions)
+- Motors
+	- DC
+	- BLDC
+	- Steppers
+	- Servos

@@ -1,0 +1,6 @@
+- Nominate students april 30 (???)
+- Seems like school reimburses supply orders
+	- Some [request form ](https://docs.google.com/forms/d/e/1FAIpQLScqroi-HwI6DlwST162pXHqdmUtIiDXBAsVsLHFL212d9yutA/viewform)
+	- Reimbursement due april 24
+- Students should have something demonstrable done each day
+- 
