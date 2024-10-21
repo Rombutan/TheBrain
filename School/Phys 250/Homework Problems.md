@@ -557,8 +557,14 @@ $$ -\frac{447t}{50}-\frac{199}{5} $$
 ![[Public/Images/Pasted image 20241021164345.png]]
 ## 20 - Spinning Earth
  **What is the moment of inertia of the Earth?** 
- Use the uniform-sphere approximation described in the introduction. The mass of the Earth is 5.97×10^24kg, the radius of the Earth is 6.38×10^6mm, and the period of rotation for the Earth is 24.0hours. The moment of inertia of a uniform sphere is given by the equation: $$I=\frac{2}{5}MR^2$$ We can plug in the given values to find I: $$I=\frac{2}{5}(5.97\cdot10^{24})(6.38\cdot10^6)= 9.72×10^{37} kg⋅m^2 $$
+ Use the uniform-sphere approximation described in the introduction. The mass of the Earth is 5.97×10^24kg, the radius of the Earth is 6.38×10^6mm, and the period of rotation for the Earth is 24.0hours. The moment of inertia of a uniform sphere is given by the equation: 
+ $$I=\frac{2}{5}MR^2$$ We can plug in the given values to find I: 
+ $$I=\frac{2}{5}(5.97\cdot10^{24})(6.38\cdot10^6)= 9.72×10^{37} kg⋅m^2 $$
  
 **What is the rotational kinetic energy of the Earth?** 
 Use the moment of inertia you calculated in Part A rather than the actual moment of inertia given in Part B. Rotational kinetic energy is given by the equation: $$KE_{rot}=\frac{1}{2} I \omega ^2$$
-However, we first have to solve for the angular speed (omega). $$ \omega = \frac{2\pi}{T} $$ Where T is the period in seconds. We're given that one period is 24 hours, so we have to calculate the equivalent of 24 hours in seconds. $$T=24 \cdot 3600 =86400 $$ Now, plugging in the values: $$\omega =\frac{2\pi}{86400} = 7.27\cdot10^{-5}$$ Going back to the original formula, we can now find KE_rot. $$KE_{rot}=\frac{1}{2} I \omega ^2 = \frac{1}{2}(9.72\cdot10^{37})(7.27\cdot10^{-5})^2=2.57\cdot 10^{29}J$$
+However, we first have to solve for the angular speed (omega). 
+$$ \omega = \frac{2\pi}{T} $$ Where T is the period in seconds. We're given that one period is 24 hours, so we have to calculate the equivalent of 24 hours in seconds. 
+$$T=24 \cdot 3600 =86400 $$ Now, plugging in the values: 
+$$\omega =\frac{2\pi}{86400} = 7.27\cdot10^{-5}$$ Going back to the original formula, we can now find KE_rot. 
+$$KE_{rot}=\frac{1}{2} I \omega ^2 = \frac{1}{2}(9.72\cdot10^{37})(7.27\cdot10^{-5})^2=2.57\cdot 10^{29}J$$
